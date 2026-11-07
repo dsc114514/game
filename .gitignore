@@ -23,3 +23,33 @@ mono_crash.*.json
 *.exe
 # Uncomment if your project does not version PCK files as runtime dependencies.
 # *.pck
+
+# Operating system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local IDE state
+.idea/
+.vs/
+*.user
+*.suo
+
+# Local environment and credentials; sanitized examples may be tracked
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Project-level build and export outputs
+/build/
+/builds/
+/dist/
+/exports/
+
+# Logs and editor backup files
+*.log
+*.bak
+*.swp
+*.swo
+*~

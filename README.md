@@ -11,14 +11,63 @@
 
 现有 Godot 忽略规则不代表完整的 Godot 工程；创建实际工程后再补充运行说明。
 
-## 获取项目
+## 在这台电脑上使用
+
+项目已经保存在：
+
+```text
+C:\Users\LENOVO\Documents\ChatGPT\game
+```
+
+在 PowerShell 中进入项目文件夹：
+
+```powershell
+Set-Location "C:\Users\LENOVO\Documents\ChatGPT\game"
+```
+
+查看 Git 版本、当前文件修改情况和关联的远程仓库：
+
+```powershell
+git --version
+git status
+git remote -v
+```
+
+这台电脑已经完成 Git 安装、仓库关联和本项目的提交身份配置，不需要重新初始化或重复克隆。如果新安装 Git 后提示找不到 `git`，请关闭并重新打开终端。
+
+## 项目文件
+
+```text
+game/
+├── .git/            本地版本记录与仓库配置，请勿手动删除
+├── AGENTS.md        后续 agent 的项目协作约定
+├── agent.md         指向协作约定的交接入口
+├── .editorconfig    编辑器的编码、缩进和换行约定
+├── .gitattributes   Git 的文本换行规则
+├── .gitignore       不纳入版本管理的文件规则
+├── LICENSE          MIT 许可证
+└── README.md        本项目说明
+```
+
+## 运行与后续开发
+
+目前还没有游戏代码、入口场景或 `project.godot`，因此暂时没有可运行的游戏，也没有可执行的构建或测试命令。
+
+后续开始开发时，需要先确定：
+
+1. 游戏类型、核心玩法和目标平台。
+2. 使用的引擎及版本。
+3. 游戏工程、入口场景和素材目录。
+4. 运行、测试和导出步骤，并将它们补充到本文件。
+
+## 在其他电脑上获取项目
 
 ```sh
 git clone https://github.com/dsc114514/game.git
 cd game
 ```
 
-首次提交前，为自己的本地仓库设置提交身份：
+在其他电脑上首次提交前，需要为那里的本地仓库设置提交身份（当前这台电脑已配置，不需要重复执行）：
 
 ```sh
 git config --local user.name "你的名字"
@@ -54,10 +103,18 @@ git switch -c feature/功能名称
 git push -u origin HEAD
 ```
 
+## Agent 加入项目
+
+后续 agent 从当前项目根目录开始工作时，请先阅读 [AGENTS.md](AGENTS.md)，再阅读本文件。用户指定的 [agent.md](agent.md) 也会指向同一份协作说明。
+
+交接说明包含当前项目状态、开始工作的检查步骤、编码约定、Git 安全边界、验证方法与后续待办。已有的本地修改应当保留；只有得到明确授权后才提交或推送。
+
 ## 配置文件
 
 | 文件 | 用途 |
 | --- | --- |
+| `AGENTS.md` | agent 的项目协作规则与交接信息 |
+| `agent.md` | 指向完整工作说明的入口 |
 | `.gitignore` | 排除 Godot 缓存、本地环境配置、构建产物和常见临时文件 |
 | `.gitattributes` | 统一跨平台换行，避免无意义的整文件差异 |
 | `.editorconfig` | 约定编码、换行和缩进；GDScript 使用制表符 |

@@ -1,15 +1,18 @@
 # game
 
-游戏项目仓库。当前已完成 Git 基础配置，尚未添加游戏工程或源码。
+游戏项目仓库，使用 Godot 4.6。
 
 ## 当前状态
 
 - 默认分支：`main`，跟踪 GitHub 的 `origin/main`。
 - 保留原有的 MIT 许可证与 Godot 忽略规则。
 - 文本文件使用 UTF-8 和 LF 换行；Windows 批处理文件使用 CRLF。
-- 尚未指定游戏引擎版本、入口场景、运行命令或构建方式。
+- 引擎：Godot 4.6。唯一的工程文件是仓库根目录的 `project.godot`，所有人都打开这一份。
+- 入口场景：`res://example/example.tscn`（卡牌拖拽示例）。
 
-现有 Godot 忽略规则不代表完整的 Godot 工程；创建实际工程后再补充运行说明。
+### 只保留一份 project.godot
+
+Godot 会把含有 `project.godot` 的文件夹当成独立项目，根项目扫描时会跳过它。所以子目录里不要再放 `project.godot`，`.gitignore` 也已经忽略根目录以外的所有 `project.godot`。从别的工程拷内容进来时，只拷场景、脚本和素材；需要的项目设置（输入映射、窗口尺寸等）在根项目的"项目设置"里重新添加。
 
 ## 在这台电脑上使用
 
@@ -46,19 +49,26 @@ game/
 ├── .gitattributes   Git 的文本换行规则
 ├── .gitignore       不纳入版本管理的文件规则
 ├── LICENSE          MIT 许可证
-└── README.md        本项目说明
+├── README.md        本项目说明
+├── project.godot    唯一的 Godot 工程文件
+├── icon.svg         项目图标
+├── control.tscn     测试场景
+├── example/         卡牌拖拽示例（场景与脚本）
+└── asset/           素材：Kenney 免费素材、像素素材等
+    └── smart-drag-and-drop-cards/   卡牌示例的来源说明（LICENSE、README、演示 gif）
 ```
+
+卡牌拖拽示例来自 SesinIvan 的 smart-drag-and-drop-cards，按 MIT 许可证使用，原许可证保留在 `asset/smart-drag-and-drop-cards/LICENSE`。
 
 ## 运行与后续开发
 
-目前还没有游戏代码、入口场景或 `project.godot`，因此暂时没有可运行的游戏，也没有可执行的构建或测试命令。
+用 Godot 4.6 打开仓库根目录的 `project.godot`，按 F5 运行入口场景。首次打开会重新导入素材，需要等待一会儿。
 
-后续开始开发时，需要先确定：
+目前还没有自动化测试或导出流程。后续还需要确定：
 
 1. 游戏类型、核心玩法和目标平台。
-2. 使用的引擎及版本。
-3. 游戏工程、入口场景和素材目录。
-4. 运行、测试和导出步骤，并将它们补充到本文件。
+2. 正式的入口场景（目前暂用卡牌示例）。
+3. 测试和导出步骤，并将它们补充到本文件。
 
 ## 在其他电脑上获取项目
 

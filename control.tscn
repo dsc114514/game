@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://c43ha5u2qdvpf"]
+
+[ext_resource type="Texture2D" uid="uid://j423ofjtan05" path="res://asset/SVG/arrow_head.svg" id="1_0fbet"]
+
+[node name="Control" type="Control" unique_id=870876625]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 876.0
+offset_bottom = 2177.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="." unique_id=2133191910]
+anchors_preset = 0
+offset_right = 2020.0
+offset_bottom = 2820.0
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1528374598]
+layout_mode = 0
+offset_right = 2021.0
+offset_bottom = 2823.0
+
+[node name="Label" type="Label" parent="Control/ColorRect" unique_id=256624152]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -385.5
+offset_right = 390.5
+offset_bottom = 1429.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.08800673, 0.32559508, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "箭头
+
+
+"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/ColorRect" unique_id=719432454]
+visible = false
+layout_mode = 0
+offset_top = 1722.0
+offset_right = 2027.0
+offset_bottom = 2815.0
+
+[node name="Button" type="Button" parent="Control" unique_id=901885997]
+visible = false
+layout_mode = 0
+offset_right = 2023.0
+offset_bottom = 2820.0
+
+[node name="ArrowHead" type="Sprite2D" parent="Control" unique_id=25511033]
+visible = false
+position = Vector2(972, 933)
+scale = Vector2(12.578125, 11.109375)
+texture = ExtResource("1_0fbet")

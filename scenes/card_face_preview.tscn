@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bhri1e2x6bl54"]
+
+[ext_resource type="Script" uid="uid://dqs7ssk5nbseh" path="res://scenes/card_face_preview.gd" id="1_preview"]
+[ext_resource type="PackedScene" path="res://scenes/card_face.tscn" id="2_card_face"]
+[ext_resource type="Texture2D" uid="uid://xsv6hsmqbsqi" path="res://asset/PNG/Default (64px)/Items/coin.png" id="3_ydtje"]
+
+[node name="CardFacePreview" type="Control" unique_id=409416637]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_preview")
+
+[node name="Background" type="ColorRect" parent="." unique_id=455175166]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.08, 0.08, 0.1, 1)
+
+[node name="CardFace" parent="." unique_id=1658438176 instance=ExtResource("2_card_face")]
+layout_mode = 0
+
+[node name="Coin" type="Sprite2D" parent="." unique_id=934608452]
+position = Vector2(48, 48)
+texture = ExtResource("3_ydtje")

@@ -1,0 +1,59 @@
+# Godot 4.2+ specific ignores
+~*.dll
+
+# Godot 4+ specific ignores
+.godot/
+.nomedia
+
+# Godot-specific ignores
+.import/
+export.cfg
+export_credentials.cfg
+*.tmp
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
+# Mono-specific ignores
+.mono/
+data_*/
+mono_crash.*.json
+
+# Export outputs
+*.exe
+# Uncomment if your project does not version PCK files as runtime dependencies.
+# *.pck
+
+# Operating system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local IDE state
+.idea/
+.vs/
+*.user
+*.suo
+
+# Local environment and credentials; sanitized examples may be tracked
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Project-level build and export outputs
+/build/
+/builds/
+/dist/
+/exports/
+
+# Logs and editor backup files
+*.log
+*.bak
+*.swp
+*.swo
+*~
+
+# Only the root project.godot is the project; nested ones hide their folder from Godot
+**/project.godot
+!/project.godot

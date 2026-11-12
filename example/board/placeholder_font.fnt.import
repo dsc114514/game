@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://c7vbyf27556nd"
+path="res://.godot/imported/placeholder_font.fnt-37881dc2bafdef454413d6ab7e61d8be.fontdata"
+
+[deps]
+
+source_file="res://example/board/placeholder_font.fnt"
+dest_files=["res://.godot/imported/placeholder_font.fnt-37881dc2bafdef454413d6ab7e61d8be.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

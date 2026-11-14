@@ -53,3 +53,7 @@ Desktop.ini
 *.swp
 *.swo
 *~
+
+# Only the root project.godot is the project; nested ones hide their folder from Godot
+**/project.godot
+!/project.godot
